@@ -5,11 +5,11 @@ import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.builder.ConfigBuilder;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.google.common.collect.Maps;
-import com.lf.mimallgenerator.entity.Result;
+import com.lf.mimall.mimallcommon.entity.Result;
+import com.lf.mimall.mimallcommon.utils.DateUtils;
+import com.lf.mimall.mimallcommon.utils.ZipUtil;
 import com.lf.mimallgenerator.service.GenerateConfig;
 import com.lf.mimallgenerator.service.GeneratorService;
-import com.lf.mimallgenerator.utils.DateUtils;
-import com.lf.mimallgenerator.utils.ZipUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -94,7 +94,7 @@ public class GenerateController {
         String[] srcDir = {outputDir + File.separator + (parentPackage.substring(0, parentPackage.indexOf(".")))};
         ZipUtil.toZip(srcDir, filePath, true);
         Map data = Maps.newHashMap();
-        data.put("filePath", URLEncoder.encode(filePath,"utf-8"));
+        data.put("filePath", URLEncoder.encode(filePath, "utf-8"));
         data.put("fileName", fileName);
         return Result.ok().data(data);
     }

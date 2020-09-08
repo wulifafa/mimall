@@ -14,5 +14,5 @@ interface ${table.mapperName} : ${superMapperClass}<${entity}>
 @Mapper
 public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
 
-}
+        }
 #end

@@ -4,12 +4,11 @@ package com.lf.mimallgenerator.entity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.time.LocalDate;
+
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
-import com.lf.mimallgenerator.mybatis.base.entity.AbstractEntity2;
+import com.lf.mimall.mimallcommon.mybatis.base.entity.AbstractEntity2;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -17,8 +16,6 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
- * 
- *
  * @author lf
  * @date 2020-09-04
  */
@@ -26,7 +23,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @TableName("sys_user")
-@ApiModel(value="SysUser对象", description="")
+@ApiModel(value = "SysUser对象", description = "")
 public class SysUser extends AbstractEntity2 {
 
 

@@ -66,16 +66,16 @@ public enum ErrorCode {
     /**
      * sentinel流控
      */
-    DEGRADE_EXCEPTION(101,"degrade exception"),
-    PARAMFLOW_EXCEPTION(102,"paramflow exception"),
-    SYSTEMBLOCK_EXCEPTION(103,"systemblock exception"),
-    SENTINEL_AUTH_EXCEPTION(104,"sentinel auth exception"),
-    FLOW_EXCEPTION(100,"flow exception"),
+    DEGRADE_EXCEPTION(101, "degrade exception"),
+    PARAMFLOW_EXCEPTION(102, "paramflow exception"),
+    SYSTEMBLOCK_EXCEPTION(103, "systemblock exception"),
+    SENTINEL_AUTH_EXCEPTION(104, "sentinel auth exception"),
+    FLOW_EXCEPTION(100, "flow exception"),
 
     /**
      * 基础业务参数错误
      */
-    INVALIDE_PARAM(200,"invalide_parameter");
+    INVALIDE_PARAM(200, "invalide_parameter");
 
     private int code;
     private String message;

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lf.test.mimall-test.server.mapper.SysUserMapper">
+<mapper namespace="com.lf.mimallgenerator.mapper.SysUserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.lf.test.mimall-test.client.model.entity.SysUser">
-        <id column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="sex" property="sex" />
-        <result column="birthday" property="birthday" />
-        <result column="create_time" property="create_time" />
-        <result column="create_by" property="create_by" />
-        <result column="update_time" property="update_time" />
-        <result column="update_by" property="update_by" />
-        <result column="del_flag" property="del_flag" />
+    <resultMap id="BaseResultMap" type="com.lf.mimallgenerator.entity.SysUser">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="sex" property="sex"/>
+        <result column="birthday" property="birthday"/>
+        <result column="create_time" property="create_time"/>
+        <result column="create_by" property="create_by"/>
+        <result column="update_time" property="update_time"/>
+        <result column="update_by" property="update_by"/>
+        <result column="del_flag" property="del_flag"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
@@ -29,7 +29,7 @@
     <sql id="join"></sql>
 
     <!-- 自定义查询单个实体 -->
-    <select id="getEntityMap" resultType="com.jiuair.cloud.data.common.core.mybatis.EntityMap">
+    <select id="getEntityMap" resultType="com.lf.mimall.mimallcommon.mybatis.EntityMap">
         SELECT * FROM
         <include refid="t_alias"/>
         <include refid="join"/>
@@ -37,7 +37,7 @@
     </select>
 
     <!-- 自定义关联查询分页 -->
-    <select id="pageList" resultType="com.jiuair.cloud.data.common.core.mybatis.EntityMap">
+    <select id="pageList" resultType="com.lf.mimall.mimallcommon.mybatis.EntityMap">
         select ${ew.select} FROM
         <include refid="t_alias"/>
         <include refid="join"/>

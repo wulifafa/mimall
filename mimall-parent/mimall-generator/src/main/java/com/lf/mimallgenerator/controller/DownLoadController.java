@@ -1,6 +1,6 @@
 package com.lf.mimallgenerator.controller;
 
-import com.lf.mimallgenerator.utils.WebUtils;
+import com.lf.mimall.mimallcommon.utils.WebUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;

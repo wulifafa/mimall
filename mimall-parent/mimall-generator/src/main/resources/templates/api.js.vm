@@ -1,6 +1,7 @@
 import request from '@/libs/request'
 
-#set($basePath = "#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+#set($basePath =
+    "#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
 /**
  * 获取分页数据
  */
@@ -21,7 +22,7 @@ const get = (id) => {
         id: id
     }
     return request({
-        url:'$basePath/get',
+        url: '$basePath/get',
         params,
         method: 'get'
     })

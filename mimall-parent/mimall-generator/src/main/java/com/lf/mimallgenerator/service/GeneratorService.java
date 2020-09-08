@@ -54,7 +54,7 @@ public class GeneratorService {
         dsc.setUrl(generateConfig.getJdbcUrl());
         dsc.setUsername(generateConfig.getJdbcUserName());
         dsc.setPassword(generateConfig.getJdbcPassword());
-        if("MYSQL".equalsIgnoreCase(generateConfig.getDbType().getDb())){
+        if ("MYSQL".equalsIgnoreCase(generateConfig.getDbType().getDb())) {
             dsc.setTypeConvert(new MySqlTypeConvert() {
                 // 自定义数据库表字段类型转换【可选】
                 @Override
@@ -63,13 +63,13 @@ public class GeneratorService {
                     if (fieldType.toLowerCase().contains("datetime")) {
                         return DbColumnType.DATE;
                     }
-                    if(fieldType.toLowerCase().equals("bigint")){
+                    if (fieldType.toLowerCase().equals("bigint")) {
                         return DbColumnType.BASE_INT;
                     }
                     return (DbColumnType) super.processTypeConvert(globalConfig, fieldType);
                 }
             });
-        }else{
+        } else {
             dsc.setTypeConvert(new OracleTypeConvert() {
                 //            // 自定义数据库表字段类型转换【可选】
                 @Override
@@ -100,7 +100,7 @@ public class GeneratorService {
         // 表名生成策略
         strategy.setNaming(NamingStrategy.underline_to_camel);
         // 字段生成策略
-       // strategy.setColumnNaming(NamingStrategy.underline_to_camel);
+        // strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.nochange);
         //strategy.setSuperEntityColumns("create_time", "update_time");
         // mapper 父类
