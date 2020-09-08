@@ -2,6 +2,7 @@ package com.lf.mimall.oauth2.controller;
 
 import cn.hutool.crypto.SecureUtil;
 import cn.hutool.json.JSONUtil;
+import com.lf.mimall.mimallcommon.entity.Result;
 import com.lf.mimall.oauth2.entity.PayloadDto;
 import com.lf.mimall.oauth2.service.JwtTokenService;
 import com.nimbusds.jose.JOSEException;

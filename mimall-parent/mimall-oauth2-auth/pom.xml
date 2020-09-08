@@ -21,8 +21,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.lf</groupId>
-            <artifactId>mimall-generator</artifactId>
+            <groupId>com.lf.mimall</groupId>
+            <artifactId>mimall-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
